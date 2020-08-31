@@ -1,0 +1,61 @@
+5. Generating statistics
+
+    Write a Perl program that reads in a sequence of numbers (entered
+    one per line) and prints out:
+
+        (a) the range of values (minimum to maximum),
+        (b) the average (arithmetic mean), 
+        (d) the median value (the value with an equal number of values
+            above it and below it), and
+        (e) the modes (the most frequently occurring values).
+
+
+6. Processing queues of data
+
+    Write a Perl program that reads in a planet's name and prints out
+    the corresponding description. Multiple planet names (or none) may
+    be specified on each input line, but only a single description (i.e.
+    for the next planet in the queue) should be printed after each
+    input. If a planet name is entered, but is currently already in the
+    queue, the repeated name should be discarded.
+
+
+7. Reporting the filesystem
+
+    a. Write a Perl program that reads in the name of a file in the
+       current directory and then prints out all other files in the
+       current directory that are larger than the first file.
+    a. Now modify the program to print out files which are either not
+       readable, or else both larger and more recently modified than
+       the first file. Each file should be marked as readable or not.
+    a. Now modify the program to print out not just the name of the
+       matching files, but also the first line of their contents.
+    a. Now modify the program to save the information into a new file,
+       as well printing it on STDOUT.
+
+8. Implementing a shell tool
+
+    b: Write a program that re-implements the basic functionality of
+       the standard UNIX uniq tool: namely, a utility that reads lines
+       from STDIN and outputs only non-repeated lines to STDOUT.
+    a: Now improve on the original, by creating a variation that culls
+       repeated lines even if they occur non-consecutively at some
+       later point in the input.
+    d: Now add a -i option to look for repeated lines
+       case-insensitively.
+    a: Now add a -u option to output only lines that were not repeated
+       in the input. (Extra points for outputting these lines in the
+       same order they were input.)
+    c: Now add a -d option to output only lines that were repeated in
+       the input. (Once again, extra points for outputting these lines
+       in the same order they were input.)
+
+
+9. Improving a Perl tool
+
+    Write a Perl program that accepts an single argument (e.g. push
+    or %ENV or perlre or Data::Dumper or epoch or a2p, etc.) without
+    any special options, and then tries all of the above
+    alternatives, in the order listed, returning the output of the
+    first alternative that produces a useful result.
+

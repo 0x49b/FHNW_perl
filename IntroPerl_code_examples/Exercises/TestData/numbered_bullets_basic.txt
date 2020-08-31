@@ -1,0 +1,123 @@
+     1. Design the Module's Interface First
+
+        The most important aspect of any module is not how it
+        implements the facilities it provides, but the way in which it
+        provides those facilities in the first place. If the module's
+        API is too awkward, or too complex, or too extensive, or too
+        fragmented, or even just poorly named, developers will avoid
+        using it. They'll write their own code instead. In that way, a
+        poorly designed module can actually reduce the overall
+        maintainability of a system.
+
+     7. Write the Test Cases Before the Code
+
+        Write the tests first. As soon as you've know your interface (rule
+        1). Write them before you start coding your application or module.
+        Unless you have tests, you have no unequivocal specification
+        of what the software should do, and no way of knowing whether
+        it does it.
+
+     3. Create Standard POD Templates for Modules and Applications
+
+        One of the main reasons documentation can often seem so
+        unpleasant is the "blank page effect." Many programmers simply
+        don't know how to get started or what to say. Perhaps the
+        easiest way to make writing documentation less forbidding (and
+        hence, more likely to actually occur) is to circumvent that
+        initial empty screen by providing a template that developers can
+        cut and paste into their code.
+
+     6. Use a Revision Control System
+
+        Maintaining control over the creation and modification of your
+        source code is utterly essential for robust team-based
+        development. And not just over source code: you should be
+        revision controlling your documentation, and data files, and
+        document templates, and makefiles, and style sheets, and change
+        logs, and any other resources your system requires. Just as you
+        wouldn't use an editor without an Undo command or a word
+        processor that can't merge documents, so too you shouldn't use a
+        file system you can't rewind, or a development environment that
+        can't integrate the work of many contributors.
+
+
+     6. Create Consistent Command-Line Interfaces
+
+        Command-line interfaces have a strong tendency to grow over
+        time, accreting new options as you add features to the
+        application. Unfortunately, the evolution of such interfaces is
+        rarely designed, managed, or controlled, so the set of flags,
+        options, and arguments that a given application accepts are
+        likely to be ad hoc and unique. This also means they're likely
+        to be inconsistent with the unique ad hoc sets of flags,
+        options, and arguments that other related applications provide.
+        The result is inevitably a suite of programs, each of which is
+        driven in a distinct and idiosyncratic way.
+
+     4. Agree Upon a Coherent Layout Style and Automate It with perltidy
+
+        Formatting. Indentation. Style. Code layout. Whatever you choose
+        to call it, it's one of the most contentious aspects of
+        programming discipline. More and bloodier wars have been fought
+        over code layout than over just about any other aspect of
+        coding. Adopting a coherently designed approach to code layout,
+        and then applying that approach consistently across all your
+        coding, is fundamental to best-practice programming. Good layout
+        can improve the readability of a program, help detect errors
+        within it, and make the structure of your code much easier to
+        comprehend. Layout matters.
+
+     22. Code in Commented Paragraphs
+
+        A paragraph is a collection of statements that accomplish a
+        single task: in literature, it's a series of sentences conveying
+        a single idea; in programming, a series of instructions
+        implementing a single step of an algorithm. Break each piece of
+        code into sequences that achieve a single task, placing a single
+        empty line between each sequence. To further improve the
+        maintainability of the code, place a one-line comment at the
+        start of each such paragraph, describing what the sequence of
+        statements does.
+
+     8. Throw Exceptions Instead of Returning Special Values or
+        Setting Flags
+
+        Errors are (supposed to be) unusual occurrences, so error
+        markers will almost never be returned. Those tedious and
+        ungainly checks for them will almost never do anything useful,
+        so eventually they'll be quietly omitted. After all, leaving
+        the tests off almost always works just fine. It's so much
+        easier not to bother. Especially when not bothering is the
+        default! Don't return special error values when something goes
+        wrong; throw an exception instead. The great advantage of
+        exceptions is that they reverse the usual default behaviors,
+        bringing untrapped errors to immediate and urgent attention. On
+        the other hand, ignoring an exception requires a deliberate and
+        conspicuous effort: you have to provide an explicit eval block
+        to neutralize it.
+
+     0. Add New Test Cases Before you Start Debugging
+
+        The first step in any debugging process is to isolate the
+        incorrect behavior of the system, by producing the shortest
+        demonstration of it that you reasonably can. Don't try to fix
+        the problem straight away, though. Instead, immediately add
+        those tests to your test suite. If that testing has been well
+        set up, that can often be as simple as adding a couple of
+        entries to a table. The point is: if the original test suite
+        didn't report this bug, then that test suite was broken. It
+        simply didn't do its job (finding bugs) adequately. Fix the test
+        suite first by adding tests that cause it to fail. Once the test
+        suite is detecting the problem correctly, then you'll be able to
+        tell when you've correctly fixed the actual bug, because the
+        tests will once again fall silent.
+
+    11. Don't Optimize Code--Benchmark It
+
+        Unless you are deeply familiar with the internals of the Perl
+        interpreter (in which case you already have far more serious
+        personal issues to deal with), intuitions about the relative
+        performance of two constructs are exactly that: unconscious
+        guesses. The only way to know for sure which of two--or
+        more--alternatives will perform better is to actually time each
+        of them. The standard Benchmark module makes that easy.
