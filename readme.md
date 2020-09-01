@@ -6,5 +6,4 @@
 |_| |_| |_|_| |_|\_/\_/      | .__/ \___|_|  |_|
                              |_|                
 ```
-
-## Repository for the FHNW Summerschool: Introduction to Perl by Dr Damian Conway
+## Repository for the FHNW Summerschool: Introduction to Perl by Dr Damian Conway
